@@ -99,7 +99,7 @@ createApp({
         },
         //新增圖片
         addImg() {
-            //以防this.tempProducts出錯，先付予tempProductsc裡一個imagesUrl的陣列
+            //以防this.tempProducts出錯，先賦予tempProductsc裡一個imagesUrl的陣列
             this.tempProducts.imagesUrl = [];
             this.tempPorducts.imagesUrl.push('');
         },
