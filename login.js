@@ -20,7 +20,7 @@ createApp({
                     window.location = 'interior.html';
                 })
                 .catch((err)=>{
-                    console.log(err.res.data.message);
+                    alert(err.response.data.message);
                 }) 
         }
     },

@@ -24,7 +24,7 @@ createApp({
                 this.getData();
             })
             .catch((err)=>{
-                alert(err.res.data.message);
+                alert(err.response.data.message);
                 window.location = 'login.html';
             })
         },
@@ -35,7 +35,7 @@ createApp({
                     this.products = res.data.products;
                 })
                 .catch((err)=>{
-                    alert(err.res.data.message);
+                    alert(err.response.data.message);
                 })
         },
         //開啟modal
@@ -43,7 +43,7 @@ createApp({
             //新增狀態
             if(states === 'new'){
                 //把tempProduct的值清空
-                this.tempProduct = {
+                this.tempProducts = {
                     imagesUrl: [],
                 }
                 //將isNew狀態改為true方便做新增function的判斷
@@ -59,7 +59,6 @@ createApp({
             }
             //刪除狀態
             else if(states === 'delet'){
-                this.tempPorducts = {...item};
                 delProductModal.show();
             }
         },
@@ -71,7 +70,7 @@ createApp({
                 delProductModal.hide();
                 this.getData()
             }).catch((err) => {
-                alert(err.res.data.message);
+                alert(err.response.data.message);
             })
         },
         //新增資料

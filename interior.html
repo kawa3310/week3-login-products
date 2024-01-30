@@ -103,21 +103,21 @@
                     </div>
                     <img :src="img" alt="img" class="img-fluid">
                   </div>
-                  <div v-if="!tempPorducts.imagesUrl.length || tempPorducts.imagesUrl[tempPorducts.imagesUrl - 1]">
+                  <template v-if="!tempPorducts.imagesUrl.length || tempPorducts.imagesUrl[tempPorducts.imagesUrl - 1]">
                      <!-- 陣列內沒有圖片 or 最後一張照片是否為真值 -->
                       <button class="btn btn-outline-primary btn-sm d-block w-100" @click="tempPorducts.imagesUrl.push('')">新增圖片
                       </button>
-                    </div>
-                  <div v-else>
+                    </template>
+                  <template v-else>
                     <button class="btn btn-outline-danger btn-sm d-block w-100" @click="tempPorducts.imagesUrl.pop()">
                         刪除圖片
                     </button>
-                  </div>
+                  </template>
                 </div>
-                <div v-else>
+                <template v-else>
                   <button class="btn btn-outline-primary btn-sm d-block w-100" @click="addImg">新增圖片
                   </button>
-                </div>   
+                </template>   
               </div>
 
 
